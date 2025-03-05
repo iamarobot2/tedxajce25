@@ -161,7 +161,7 @@ const Ticket = () => {
           <div className="md:hidden text-base italic space-y-2 text-center w-full">
             <div>
               <span>Date: </span>
-              <span className="text-red-600">7th March 2025</span>
+              <span className="text-red-600">12th March 2025</span>
             </div>
             <div>
               <span>Venue: </span>
