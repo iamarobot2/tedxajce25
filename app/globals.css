@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+/* custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(235, 0, 40, 0.5);
+  border-radius: 20px;
+  transition: background 0.3s, width 0.3s;
+}
+.parallax-img {
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d20024;
+  width: 8px;
+}
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+  background: #c00020;
+  width: 8px;
+}
+.gallery-item {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+img {
+  backface-visibility: hidden;
+  transform: translateZ(0.1px);
+}
+
+.group:hover .blur-overlay {
+  filter: blur(40px);
+  opacity: 0.4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Helvetica Light";
+  src: url("/fonts/HelveticaLight.woff2") format("woff2"),
+    url("/fonts/HelveticaLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-helvetica-light {
+  font-family: "Helvetica Light", Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.typewriter {
+  position: relative;
+  display: inline-block;
+}
+
+.typewriter::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 1px;
+  height: 80%;
+  background-color: white;
+  animation: blink 0.5s steps(1) infinite;
+  padding-left: 1px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
