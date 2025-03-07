@@ -56,17 +56,17 @@ export default function About() {
       </h2>
 
       {/* Desktop Layout */}
-      <div className="hidden md:grid container mx-auto px-4 grid-cols-3 gap-8 mb-16 relative w-full text-ellipsis">
+      <div className="hidden md:flex flex-row container mx-auto px-4 gap-8 relative w-full text-ellipsis">
         {/* TED Column */}
         <motion.div
-          className="flex flex-col gap-6 items-center justify-between h-[600px] relative p-6"
+          className="flex flex-col gap-6 items-center justify-between relative p-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true , x:0 }}
           // variants={leftVariant}
           transition={{ duration: 1 }}
         >
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col ">
             <div className="flex justify-center mb-8">
               <Image
                 src="/assets/ted.png"
@@ -93,13 +93,13 @@ export default function About() {
 
         {/* TEDx Column */}
         <motion.div
-          className="flex flex-col items-center gap-6 justify-between h-[600px] relative p-6"
+          className="flex flex-col items-center gap-6 justify-between relative p-6"
           initial="hidden"
           whileInView="visible"
           variants={columnVariants}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col ">
             <div className="flex justify-center mb-8">
               <Image
                 src="/assets/tedx.png"
@@ -126,13 +126,13 @@ export default function About() {
 
         {/* TEDx AJCE Column */}
         <motion.div
-          className="flex flex-col gap-6 items-center justify-between h-[600px] relative p-6"
+          className="flex flex-col gap-6 items-center justify-between relative p-6"
           initial="hidden"
           whileInView="visible"
           variants={columnVariants}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col ">
             <div className="flex justify-center mb-8">
               <Image
                 src="/assets/tedxajce.png"
@@ -156,11 +156,11 @@ export default function About() {
       </div>
 
       {/* Mobile Carousel Layout */}
-      <div className="md:hidden w-full relative">
+      <div className="md:hidden flex flex-row w-full relative">
         <AnimatePresence initial={false} mode="wait">
           <motion.div
             key={currentIndex}
-            className="flex flex-col items-center justify-between h-[600px] px-4 mx-2 border border-red-600 rounded-3xl p-6"
+            className="flex flex-col items-center justify-between px-4 mx-2 border border-red-600 rounded-3xl p-6"
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
@@ -177,7 +177,7 @@ export default function About() {
               }
             }}
           >
-            <div className="flex flex-col h-full">
+            <div className="flex flex-col">
               <div className="text-center mb-8">
                 <Image
                   src={items[currentIndex].image}
