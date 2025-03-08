@@ -16,6 +16,11 @@ const testimonials = [
     name: "Bobby Isac",
     title: "TEDxAJCE Organiser | 2019",
   },
+  {
+    quote:"“I feel incredibly lucky to have had the opportunity to organize a TEDx event. It was a completely different experience from simply being a team member. TEDxAJCE was the first organization I joined in college, and I was fortunate to be part of the curation team for the past two editions. Despite the challenges we faced, this platform allowed me to grow in so many ways. I’m deeply grateful to my amazing crew for pulling off such a spectacular event.”",
+    name: "Abin K John",
+    title: "TEDxAJCE Organiser | 2024",
+  },
   
 ];
 
