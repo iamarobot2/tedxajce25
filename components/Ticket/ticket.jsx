@@ -9,7 +9,7 @@ const Ticket = () => {
   };
 
   return (
-    <div className="flex justify-center items-center  box-border p-10 md:p-16 border-0 md:border-2 border-white rounded-[30px] relative  md:max-h-[600px] w-[90%] md:max-w-full mx-auto overflow-hidden">
+    <div className="flex justify-center items-center  box-border p-10 md:p-16 border-0 md:border-2 border-red-600 rounded-[30px] relative  md:max-h-[600px] w-[90%] md:max-w-full mx-auto overflow-hidden">
       {/* Come Join Us section */}
       <div className="absolute right-4 md:left-10 top-4 md:top-10 text-[30px] text-right md:text-left">
         <div>

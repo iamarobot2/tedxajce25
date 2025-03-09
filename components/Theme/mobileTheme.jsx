@@ -4,9 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 
-// Header Component (TEDx AJCE + Circle Menu)
-
-// Main Banner (Unwavering Choices) with Click Transition
+// Main Banner (ASCENT theme) with Click Transition
 const MainBanner = () => {
   const [isRed, setIsRed] = useState(true);
 
@@ -55,30 +53,29 @@ const MainBanner = () => {
           >
             {isRed ? (
               <div className="flex flex-col items-start">
-                <div className="text-2xl font-medium italic mb-1">
-                  " Unwavering
+                <div className="text-2xl font-bold italic mb-1 text-black">
+                  " ASCENT:
                 </div>
-                <div className="text-2xl font-bold italic mb-3 text-black">Choices</div>
+                <div className="text-lg font-extralight italic">Every <span className="text-xl">Step</span></div>
                 <div className="text-lg font-extralight">
-                  Where Every Path
+                  Leaves A
                 </div>
-                <div className="text-lg font-extralight">Shapes</div>
-                <div className="text-lg font-light italic">Tomorrow."</div>
+                <div className="text-xl font-extralight">Mark"</div>
                 <div className="text-[10px] mt-6 opacity-80 italic">
                   AN INDEPENDENTLY ORGANIZED <span className="text-white font-extrabold">TED</span> EVENT
                 </div>
               </div>
             ) : (
               <div className="flex flex-col items-end">
-                <div className="text-2xl font-medium italic mb-1">
-                  " Unwavering
+                <div className="text-lg font-extralight italic mb-1">
+                  " We Climb
                 </div>
-                <div className="text-2xl font-bold italic mb-3 text-red-600">Choices</div>
-                <div className="text-lg font-extralight ">
-                  Where Every Path
+                <div className="text-lg font-extralight italic text-red-600">By The</div>
+                <div className="text-2xl font-bold">
+                  Choices
                 </div>
-                <div className="text-lg font-extralight italic">Shapes</div>
-                <div className="text-lg font-light italic">Tomorrow.</div>
+                <div className="text-lg font-extralight italic">We</div>
+                <div className="text-lg font-light italic">Make "</div>
                 <div className="text-[10px] mt-6 opacity-80 italic">
                   AN INDEPENDENTLY ORGANIZED <span className="text-red-600 font-extrabold">TED</span> EVENT
                 </div>
@@ -181,22 +178,18 @@ const MobileBentoView = () => {
             <ImageSection1 />
             <TicketButton />
           </div>
-          <div className="flex items-center justify-center rounded-3xl overflow-y-scroll text-ellipsis p-4 cursor-pointer border-2 border-red-600  shadow-md hover:shadow-xl h-[250px] max-w-[65%] max-h-[300px]">
+          <div className="flex items-center justify-center rounded-3xl overflow-y-scroll text-ellipsis p-4 cursor-pointer border-2 border-red-600 shadow-md hover:shadow-xl h-[250px] max-w-[65%] max-h-[300px]">
             {/* info section */}
             <div className="text-sm leading-relaxed ">
-              <span className="text-white">Welcome to </span>
-              <span className="text-red-600 font-medium">TEDXAJCE</span>
+              <span className="text-red-600 font-medium">ASCENT: </span>
+              <span className="text-white">Every Step Leaves a Mark. </span>
               <span className="text-gray-400">
-                , where passion and minds share ideas worth spreading. Join us
-                at{" "}
+                We climb mountains of opportunity, 
+                descend into valleys of reflection. Your ascent begins with a single 
+                step. Choose wisely. Choose boldly. But above all, {" "}
               </span>
               <span className="text-white font-medium">
-                Amal Jyothi College of Engineering
-              </span>
-              <span className="text-gray-400">
-                {" "}
-                bringing together innovators and inspiring speakers from our
-                local community.
+                choose.
               </span>
             </div>
           </div>

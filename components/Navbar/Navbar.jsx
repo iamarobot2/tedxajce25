@@ -58,11 +58,10 @@ const Navbar = () => {
             "flex items-center justify-between px-4 md:w-[600px] md:h-[50px] md:rounded-[25px] md:border-[0.5px] md:border-red-600 md:bg-black/80 w-full h-14"
           }
         >
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:block">
-            <div className="flex flex-row items-center justify-between ">
-              {" "}
-              {/* Reduced spacing */}
+          {/* Combined Navigation Links and Button Container */}
+          <div className="hidden md:flex w-full items-center justify-between">
+            {/* Navigation Links */}
+            <div className="flex space-x-5">
               <Link
                 key="THEME"
                 href={`#THEME`}
@@ -100,14 +99,12 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </div>
-          </div>
 
-          {/* Get Tickets Button */}
-          <div className="hidden md:block">
+            {/* Ticket Button (Right-aligned) */}
             <Link
               href="#TICKETS"
               onClick={(e) => handleSmoothScroll(e, "TICKETS")}
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium transition-colors duration-300 h-14 flex items-center justify-center" // Adjusted height to match navbar
+              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-medium transition-colors duration-300 flex items-center justify-center"
               style={{ height: "50px", marginRight: "-18px" }}
             >
               GET TICKETS
