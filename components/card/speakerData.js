@@ -35,7 +35,7 @@ export const speakerData = [
     id: 4,
     quote:
       "From humble beginnings to environmental visionary, Thajudeen Aboobaker has redefined waste management through Urban Trash, creating a business model where sustainability and profitability walk hand in hand.",
-    name: "Thajudheen Aboobakar",
+    name: "Thajudeen Aboobaker",
     designation: "CEO, Urban Trash",
     src: "/assets/thajudeen.png",
   },
