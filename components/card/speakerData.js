@@ -27,7 +27,7 @@ export const speakerData = [
     id: 3,
     quote:
       "With a gift for transforming silence into powerful storytelling, Vinitha Koshy navigates between the world of cinema and storytelling, crafting performances so authentic they continue to resonate long after the screen fades to black.",
-    name: "Vineetha Koshy",
+    name: "Vinitha Koshy",
     designation: "Indian Actress",
     src: "/assets/vineetha.png",
   },
