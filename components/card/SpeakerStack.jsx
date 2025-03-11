@@ -8,7 +8,7 @@ const SpeakerStack = () => {
     <div className="flex flex-col items-center justify-center gap-20 md:gap-28 w-[90%] md:max-w-full mx-auto overflow-hidden">
       <motion.div // Use motion.section for animation
         id="SPEAKERINTRO"
-        className="flex  text-white bg-black text-center justify-center items-center mx-auto"
+        className="flex  text-white  text-center justify-center items-center mx-auto"
         transition={{ duration: 1 }}
         initial={{ y: 100, opacity: 0, x: 0 }}
         whileInView={{ y: 0, opacity: 1, x: 0 }}

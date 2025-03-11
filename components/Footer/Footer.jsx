@@ -8,7 +8,7 @@ export default function Footer() {
    const d = new Date();
    let year = d.getFullYear();
   return (
-    <footer className="bg-black text-white flex flex-col  justify-center w-[90%] mx-auto overflow-hidden mb-8 ">
+    <footer className=" text-white flex flex-col  justify-center w-[90%] mx-auto overflow-hidden mb-8 ">
        <AnimatedPinDemo />
         {/* Top section with three columns */}
         <div className="flex flex-col md:flex-row  justify-between gap-8 my-10">

@@ -81,7 +81,7 @@ const Gallery = () => {
     <>
       <motion.div // Use motion.section for animation
         id="SPEAKERINTRO"
-        className="flex  text-white bg-black text-center justify-start items-center "
+        className="flex  text-white text-center justify-start items-center "
         transition={{ duration: 1 }}
         initial={{ y: 100, opacity: 0, x: 0 }}
         whileInView={{ y: 0, opacity: 1, x: 0 }}

@@ -26,7 +26,7 @@ const MainBanner = () => {
       className={`group flex flex-col justify-center items-center px-8 py-16 max-md:px-4 max-md:py-8 max-sm:px-2 max-sm:py-4 text-lg whitespace-nowrap rounded-3xl h-full shadow-lg overflow-hidden ${
         isRed
           ? "bg-red-600 text-white"
-          : "bg-black border-2 border-red-600 text-white"
+          : "backdrop-blur-xl border-2 border-red-600 text-white"
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -56,13 +56,14 @@ const MainBanner = () => {
                 <div className="text-2xl font-bold italic mb-1 text-black">
                   " ASCENT:
                 </div>
-                <div className="text-lg font-extralight italic">Every <span className="text-xl">Step</span></div>
-                <div className="text-lg font-extralight">
-                  Leaves A
+                <div className="text-lg font-extralight italic">
+                  Every <span className="text-xl">Step</span>
                 </div>
+                <div className="text-lg font-extralight">Leaves A</div>
                 <div className="text-xl font-extralight">Mark"</div>
                 <div className="text-[10px] mt-6 opacity-80 italic">
-                  AN INDEPENDENTLY ORGANIZED <span className="text-white font-extrabold">TED</span> EVENT
+                  AN INDEPENDENTLY ORGANIZED{" "}
+                  <span className="text-white font-extrabold">TED</span> EVENT
                 </div>
               </div>
             ) : (
@@ -70,14 +71,15 @@ const MainBanner = () => {
                 <div className="text-lg font-extralight italic mb-1">
                   " We Climb
                 </div>
-                <div className="text-lg font-extralight italic text-red-600">By The</div>
-                <div className="text-2xl font-bold">
-                  Choices
+                <div className="text-lg font-extralight italic text-red-600">
+                  By The
                 </div>
+                <div className="text-2xl font-bold">Choices</div>
                 <div className="text-lg font-extralight italic">We</div>
                 <div className="text-lg font-light italic">Make "</div>
                 <div className="text-[10px] mt-6 opacity-80 italic">
-                  AN INDEPENDENTLY ORGANIZED <span className="text-red-600 font-extrabold">TED</span> EVENT
+                  AN INDEPENDENTLY ORGANIZED{" "}
+                  <span className="text-red-600 font-extrabold">TED</span> EVENT
                 </div>
               </div>
             )}
@@ -103,7 +105,7 @@ const HoverCard = ({ children, defaultRed = false }) => {
         className={`relative rounded-3xl p-4 cursor-pointer overflow-hidden shadow-md hover:shadow-xl ${
           isRed
             ? "bg-red-600 text-white"
-            : "bg-black border-2 border-red-600 text-white"
+            : "backdrop-blur-xl border-2 border-red-600 text-white"
         }`}
         onMouseEnter={() => setIsRed(true)}
         onMouseLeave={() => setIsRed(false)}
@@ -167,7 +169,7 @@ const TicketButton = () => (
 // Main Component
 const MobileBentoView = () => {
   return (
-    <div className="bg-black px-4 py-4">
+    <div className="backdrop-blur-2xl px-4 py-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <ImageSection />
 
@@ -184,13 +186,11 @@ const MobileBentoView = () => {
               <span className="text-red-600 font-medium">ASCENT: </span>
               <span className="text-white">Every Step Leaves a Mark. </span>
               <span className="text-gray-400">
-                We climb mountains of opportunity, 
-                descend into valleys of reflection. Your ascent begins with a single 
-                step. Choose wisely. Choose boldly. But above all, {" "}
+                We climb mountains of opportunity, descend into valleys of
+                reflection. Your ascent begins with a single step. Choose
+                wisely. Choose boldly. But above all,{" "}
               </span>
-              <span className="text-white font-medium">
-                choose.
-              </span>
+              <span className="text-white font-medium">choose.</span>
             </div>
           </div>
         </div>

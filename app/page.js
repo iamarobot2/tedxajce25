@@ -55,7 +55,7 @@ export default function Home() {
       {animationComplete && (
         <>
           <Navbar />
-          <main className="flex flex-col w-full gap-16 bg-black items-center justify-center font-[family-name:var(--font-geist-sans)]">
+          <main className="flex flex-col w-full gap-16  items-center justify-center font-[family-name:var(--font-geist-sans)]">
             {/* {isMobile ? <MobileBentoView /> : <BentoTheme />}
             <SpeakerStack />
             <About />
@@ -66,51 +66,51 @@ export default function Home() {
             {/* <Footer /> */}
             <section
               id="THEME"
-              className="flex flex-col w-full gap-16 bg-black items-center justify-center"
+              className="flex flex-col w-full gap-16  items-center justify-center"
             >
               {isMobile ? <MobileBentoView /> : <BentoTheme />}
             </section>
             <section
               id="SPEAKERS"
-              className="flex flex-col w-full gap-16 bg-black items-center justify-center"
+              className="flex flex-col w-full gap-16  items-center justify-center"
             >
               <SpeakerStack />
             </section>
             <section
               id="ABOUT"
-              className="flex flex-col w-full gap-16 bg-black items-center justify-center"
+              className="flex flex-col w-full gap-16  items-center justify-center"
             >
               <About />
             </section>
             <section
               id="TICKETS"
-              className="flex flex-col w-full gap-16 bg-black items-center justify-center"
+              className="flex flex-col w-full gap-16  items-center justify-center"
             >
               <Ticket />
             </section>
             <section
               id="HIGHLIGHTS"
-              className="flex flex-col w-full gap-16 bg-black items-center justify-center"
+              className="flex flex-col w-full gap-16  items-center justify-center"
             >
               <PreviousHighlights />
             </section>
             <section
               id="GALLERY"
-              className="flex flex-col w-full gap-16 bg-black items-center justify-center"
+              className="flex flex-col w-full gap-16  items-center justify-center"
             >
               <Gallery />
             </section>
             <section
               id="TESTIMONIAL"
-              className="flex flex-col w-full gap-16 bg-black items-center justify-center"
+              className="flex flex-col w-full gap-16  items-center justify-center"
             >
               <Testimonial />
             </section> 
             <section
               id="FOOTER"
-              className="flex flex-col w-full gap-16 bg-black items-center justify-center"
+              className="flex flex-col w-full gap-16  items-center justify-center"
             >
-              <div className="flex flex-col w-full gap-16 bg-black items-center justify-center ">
+              <div className="flex flex-col w-full gap-16  items-center justify-center ">
                 {/* <AnimatedPinDemo /> */}
                 <Footer />
               </div>
