@@ -151,7 +151,7 @@ const LeftColumn = React.memo(({ layout, setLayout }) => {
       className={`group flex flex-col justify-center items-center px-12 py-20 max-md:px-6 max-md:py-12 max-sm:px-4 max-sm:py-8 text-xl whitespace-nowrap rounded-l-[30px] max-md:rounded-r-[30px] max-md:rounded-bl-none h-full shadow-lg overflow-hidden ${
         isRed
           ? "bg-red-600 text-white"
-          : "bg-black border-2 border-red-600 text-white"
+          : " backdrop-blur-xl  border-2 border-red-600 text-white"
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -173,10 +173,10 @@ const LeftColumn = React.memo(({ layout, setLayout }) => {
             variants={textContainerVariants}
             className={`w-full ${
               isRed ? "text-left" : "text-right"
-            } text-white italic font-light text-[52px] max-md:text-4xl max-sm:text-3xl leading-tight tracking-wide`}
+            } text-white italic font-light text-[52px] max-md:text-4xl max-sm:text-3xl leading-tight tracking-tight`}
           >
             {isRed ? (
-              <div className="flex flex-col items-start space-y-0.5">
+              <div className="flex flex-col items-start space-y-0">
                 {hoverText.map((line, idx) => {
                   const isChoices = line === "CHOICES";
                   const isMake = line === "MAKE";
@@ -207,7 +207,7 @@ const LeftColumn = React.memo(({ layout, setLayout }) => {
                 })}
               </div>
             ) : (
-              <div className="flex flex-col items-end space-y-0.5">
+              <div className="flex flex-col items-end space-y-0">
                 {defaultText.map((line, idx) => {
                   const isAscent = line === "ASCENT : ";
                   const isLeaves = line === "LEAVES";
@@ -303,10 +303,10 @@ const RightColumn = React.memo(({ layout, setLayout }) => {
 
   return (
     <motion.div
-      className={`group flex flex-col items-center justify-center px-10 py-10 max-md:px-6 max-md:py-8 max-sm:px-4 max-sm:py-6 w-full text-sm rounded-r-[30px] max-md:rounded-l-[30px] max-md:rounded-tr-none h-full cursor-pointer shadow-lg overflow-hidden ${
+      className={`group flex flex-col items-center justify-center px-10 py-10 max-md:px-6 max-md:py-8 max-sm:px-4 max-sm:py-6 w-full text-sm/tight leading-1 rounded-r-[30px] max-md:rounded-l-[30px] max-md:rounded-tr-none h-full cursor-pointer shadow-lg overflow-hidden ${
         isRed
           ? "bg-red-600 text-white"
-          : "bg-black border-2 border-red-600 text-white"
+          : " backdrop-blur-xl  border-2 border-red-600 text-white"
       }`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -321,7 +321,7 @@ const RightColumn = React.memo(({ layout, setLayout }) => {
       }}
     >
       <motion.div
-        className="font-extralight w-full leading-relaxed relative"
+        className="font-extralight w-full leading-tight relative"
         animate={{ x: 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
       >
@@ -333,8 +333,8 @@ const RightColumn = React.memo(({ layout, setLayout }) => {
             exit="slide"
             variants={textContainerVariants}
             className={`w-full ${
-              isRed ? "text-left" : "text-left"
-            } text-base tracking-wide max-md:text-sm`}
+              isRed ? "text-left" : "text-right"
+            } text-base tracking-tight max-md:text-sm`}
             style={{ fontFamily: "Helvetica Neue" }}
           >
             {isRed ? (
@@ -356,7 +356,7 @@ const RightColumn = React.memo(({ layout, setLayout }) => {
                 transition={{ delay: 0.4 }}
               >
                 <div
-                  className="leading-relaxed space-y-1"
+                  className="leading-tight space-y-0"
                   style={{ fontFamily: "Helvetica Neue" }}
                 >
                   <span
@@ -387,7 +387,7 @@ const RightColumn = React.memo(({ layout, setLayout }) => {
               <br className="max-md:hidden" />
               <br className="max-md:hidden" />
               <div
-                className="leading-relaxed space-y-1"
+                className="leading-tight space-y-0"
                 style={{ fontFamily: "Helvetica Neue" }}
               >
                 Our lives are{" "}
@@ -442,7 +442,7 @@ const RightColumn = React.memo(({ layout, setLayout }) => {
               <br className="max-md:hidden" />
               <br className="max-md:hidden" />
               <div
-                className="leading-relaxed space-y-1"
+                className="leading-tight space-y-0"
                 style={{ fontFamily: "Helvetica Neue" }}
               >
                 In a world of endless possibilities, courage isn't found in
@@ -476,7 +476,14 @@ const RightColumn = React.memo(({ layout, setLayout }) => {
                 </span>{" "}
                 begins with a single step. Choose wisely. Choose boldly. But
                 above all,{" "}
-                <span className="text-red-600 font-semibold">choose</span>.
+                <span
+                  className={`font-medium italic ${
+                    isRed ? "text-black" : "text-red-500"
+                  }`}
+                >
+                  choose
+                </span>
+                .
               </div>
             </motion.div>
           </motion.div>
@@ -522,7 +529,7 @@ export default function BentoTheme() {
 
   return (
     <motion.section
-      className="overflow-hidden bg-black"
+      className="overflow-hidden "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -530,7 +537,7 @@ export default function BentoTheme() {
       <div className="relative flex flex-col w-full  max-md:max-w-full">
         <div className="relative flex flex-col items-center pb-40 w-full max-md:pb-20 max-md:max-w-full">
           <motion.div
-            className="absolute inset-0 bg-black bg-opacity-70"
+            className="absolute inset-0  bg-opacity-70"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}

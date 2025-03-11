@@ -35,15 +35,15 @@ const Preloader = ({ isLoaded, onAnimationComplete }) => {
 
   return (
     <motion.div
-      className="fixed inset-0 flex items-center justify-center bg-black z-50"
+      className="fixed inset-0 flex items-center justify-center  z-50"
       initial={{ opacity: 1 }}
       animate={isLoaded && animationComplete ? { opacity: 0 } : {}}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
     >
       <div className="relative text-4xl font-bold flex items-center">
         <motion.span className="tedx inline-block text-red-600 typewriter"></motion.span>
         <span
-          className="ajce relative inline-block text-gray-500 overflow-hidden"
+          className="ajce relative inline-block text-gray-100 overflow-hidden"
           style={{ position: "absolute", left: "calc(100% - 2ch)", opacity: 0 }}
         >
           <span className="relative font-thin">AJCE</span>

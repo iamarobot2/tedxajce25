@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ReactLenis } from "../utils/lenis";
-
+import Threads from "../components/Background/ThreadBackground";
+import { Color } from "ogl";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,12 +51,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable}`}
-      >
-        <ReactLenis root>
-        {children}
-        </ReactLenis>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Threads
+          enableMouseInteraction={true}
+          color={[150 / 0, 0 / 4, 10 / 100]} 
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: -1,
+          }}
+        />
+        <ReactLenis root>{children}</ReactLenis>
       </body>
     </html>
   );

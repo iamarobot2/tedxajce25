@@ -59,7 +59,7 @@ const Testimonial = () => {
             exit="exit"
             className=" inset-0 flex flex-col items-center justify-center px-4"
           >
-            <div className="bg-black/80 backdrop-blur-lg rounded-xl md:rounded-2xl p-6 md:p-8  border border-red-600 shadow-[0_0_20px_3px_rgba(220,38,38,0.3)] w-full max-w-2xl">
+            <div className=" bg-black/90 rounded-xl md:rounded-2xl p-6 md:p-8  border border-red-600 shadow-[0_0_20px_3px_rgba(220,38,38,0.3)] w-full max-w-2xl">
               <motion.blockquote
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
